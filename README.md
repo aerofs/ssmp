@@ -9,7 +9,7 @@ Key design goals:
   - Text-based, for easy debugging
   - Interleave request/responses and server events on a single connection
   - Simple enough that a complete and efficient client or server can be
-    written in pretty much any programming language in a few hours
+    written in pretty much any programming language within a few hours
 
 
 History
@@ -86,7 +86,7 @@ If the authentication is successful, the server MUST send a `200` response
 with no payload.
 
 If no request is received after a reasonable period of time, typically a few
-seconds, the server MUST close the connection, without sending any response.
+seconds, the server MUST close the connection without sending any response.
 
 If the first request is not a `LOGIN` the server MUST send a `400` response
 and immediately close the connection.
@@ -266,7 +266,7 @@ where
   - `payload` is the message payload to be sent to the peer
 
 
-If no peer with the requested identifier are currently connected, the server
+If no peer with the requested identifier is currently connected, the server
 MUST send a `404` response.
 
 Otherwise it MUST send the following event to the given peer:
