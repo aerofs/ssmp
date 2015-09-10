@@ -75,7 +75,7 @@ forwardable = "SUBSCRIBE" SP id [ SP "PRESENCE" ]
 
 compat      = verb [ SP id ] [ SP payload ]
 
-code        = 3DIGIT
+code        = 3*DIGIT
 verb        = 1*UPALPHA
 id          = 1*ID
 payload     = 1*PAYLOAD
